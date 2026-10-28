@@ -37,22 +37,21 @@ Access the application at `http://localhost:5000`.
 
 ---
 
-## 🌐 Publish to Docker Hub
+## 🌐 Docker Hub Image
 
-1. **Log in to Docker Hub**:
-   ```bash
-   docker login
-   ```
+Your image is published on Docker Hub:
+👉 **[sudeepkumarreddyeaga/caws-practice on Docker Hub](https://hub.docker.com/r/sudeepkumarreddyeaga/caws-practice)**
 
-2. **Tag the image with your Docker Hub username**:
-   ```bash
-   docker tag sudeep-webpage:latest <YOUR_DOCKERHUB_USERNAME>/caws-practice:latest
-   ```
+### Pull and Run from Anywhere:
+```bash
+docker run -d -p 5000:5000 --name sudeep-webpage-app sudeepkumarreddyeaga/caws-practice:latest
+```
 
-3. **Push to Docker Hub**:
-   ```bash
-   docker push <YOUR_DOCKERHUB_USERNAME>/caws-practice:latest
-   ```
+### To Re-tag and Push Updates:
+```bash
+docker tag sudeep-webpage:latest sudeepkumarreddyeaga/caws-practice:latest
+docker push sudeepkumarreddyeaga/caws-practice:latest
+```
 
 
 ---
