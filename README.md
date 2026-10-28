@@ -37,6 +37,26 @@ Access the application at `http://localhost:5000`.
 
 ---
 
+## 🌐 Publish to Docker Hub
+
+1. **Log in to Docker Hub**:
+   ```bash
+   docker login
+   ```
+
+2. **Tag the image with your Docker Hub username**:
+   ```bash
+   docker tag sudeep-webpage:latest <YOUR_DOCKERHUB_USERNAME>/caws-practice:latest
+   ```
+
+3. **Push to Docker Hub**:
+   ```bash
+   docker push <YOUR_DOCKERHUB_USERNAME>/caws-practice:latest
+   ```
+
+
+---
+
 ## 📦 Pushing to Git
 
 Initialize the git repository and push to your remote repository:
