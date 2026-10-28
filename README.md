@@ -47,11 +47,16 @@ Your image is published on Docker Hub:
 docker run -d -p 5000:5000 --name sudeep-webpage-app sudeepkumarreddyeaga/caws-practice:latest
 ```
 
-### To Re-tag and Push Updates:
-```bash
-docker tag sudeep-webpage:latest sudeepkumarreddyeaga/caws-practice:latest
-docker push sudeepkumarreddyeaga/caws-practice:latest
-```
+---
+
+## ⚙️ AWS & Jenkins CI/CD Pipeline
+
+This project includes a complete automated CI/CD pipeline triggered every **5 minutes** via Jenkins Poll SCM.
+
+- **[Jenkinsfile](Jenkinsfile)**: Declarative pipeline with `pollSCM('H/5 * * * *')`, automated Docker build, container re-deployment, and health check.
+- **[setup_aws_ec2.sh](setup_aws_ec2.sh)**: One-command setup script for Ubuntu EC2 instances (installs Git, Docker Engine, Java 17, and Jenkins).
+- **[AWS_JENKINS_SETUP.md](AWS_JENKINS_SETUP.md)**: Full step-by-step guide with AWS Security Group configurations and Jenkins UI instructions.
+
 
 
 ---
